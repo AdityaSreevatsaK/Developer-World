@@ -143,8 +143,9 @@ function pixelTile(x,y,level,count,arch,p){
  const circle=(a,b,r,c)=>`<circle cx="${a}" cy="${b}" r="${r}" fill="${c}"/>`;
  const line=(d,c,w=1)=>`<path d="${d}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round"/>`;
  const ground=arch?[p.sea,p.sea,p.wave,p.grass,p.gold]:[p.dim,p.dim,p.grass,p.grass2,p.gold];
+ const silhouettes=arch?["quiet","sandbar","woodland","workshop","citadel"]:["quiet","sprout","cottage","workshop","townhall"];
  const ring=level===4?p.gold:p.stroke;
- let out=`<g transform="translate(${x} ${y})" class="dw-intensity dw-intensity-${arch?"isle":"town"} dw-tier-${level}" data-art-level="${level}" data-art-detail="${detail}" aria-hidden="true">`;
+ let out=`<g transform="translate(${x} ${y})" class="dw-intensity dw-intensity-${arch?"isle":"town"} dw-tier-${level}" data-art-level="${level}" data-art-detail="${detail}" data-silhouette="${silhouettes[level]}" aria-hidden="true">`;
  out+=rect(0,0,15,16,ground[level],`stroke="${ring}" stroke-width="${level===4?1.8:.8}" opacity="${level?1:.82}"`);
  if(!level){
   // Empty plots have no structures; quiet ≠ an invented contribution.
