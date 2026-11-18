@@ -17,14 +17,17 @@ function compress(data){
  write(prefix);write(end);if(used)out.push(bits&255);
  return out;
 }
+// Delay may be one centisecond value for every frame or one value per frame.
+// A longer final delay holds the completed world before the infinite loop resets.
 function createGif(rgbaFrames,width,height,delayCentiseconds=45){
  if(!Number.isInteger(width)||!Number.isInteger(height)||width<1||height<1||width>1600||height>1200)throw Error("Invalid GIF dimensions");
  if(!Array.isArray(rgbaFrames)||!rgbaFrames.length||rgbaFrames.length>48)throw Error("GIF requires 1 to 48 frames");
- if(!Number.isInteger(delayCentiseconds)||delayCentiseconds<2||delayCentiseconds>1000)throw Error("Invalid GIF delay");
+ const frameDelays=Array.isArray(delayCentiseconds)?delayCentiseconds:Array(rgbaFrames.length).fill(delayCentiseconds);
+ if(frameDelays.length!==rgbaFrames.length||!frameDelays.every(value=>Number.isInteger(value)&&value>=2&&value<=1000))throw Error("Invalid GIF delay");
  const out=[];const u16=n=>out.push(n&255,(n>>8)&255);
  const ascii=s=>{for(let i=0;i<s.length;i++)out.push(s.charCodeAt(i));};
- const image=frame=>{
-  out.push(0x21,0xf9,4,0x08);u16(delayCentiseconds);out.push(0,0);
+ const image=(frame,delay)=>{
+  out.push(0x21,0xf9,4,0x08);u16(delay);out.push(0,0);
   out.push(0x2c);u16(0);u16(0);u16(width);u16(height);out.push(0);
   out.push(8);
   const codes=compress(frame);
@@ -38,14 +41,15 @@ function createGif(rgbaFrames,width,height,delayCentiseconds=45){
  // Deterministic RGB332 palette, robust to light/dark themes and browser rasterisation.
  for(let i=0;i<256;i++)out.push(Math.round((i>>5)*255/7),Math.round(((i>>2)&7)*255/7),Math.round((i&3)*255/3));
  out.push(0x21,0xff,0x0b);ascii("NETSCAPE2.0");out.push(3,1,0,0,0);
- for(const rgba of rgbaFrames){
+ for(let frameIndex=0;frameIndex<rgbaFrames.length;frameIndex++){
+  const rgba=rgbaFrames[frameIndex];
   if(!rgba||rgba.length!==width*height*4)throw Error("Invalid frame size");
   const indexed=new Uint8Array(width*height);
   for(let i=0,j=0;i<rgba.length;i+=4,j++){
    const a=rgba[i+3]/255,r=Math.round(rgba[i]*a+255*(1-a)),g=Math.round(rgba[i+1]*a+255*(1-a)),b=Math.round(rgba[i+2]*a+255*(1-a));
    indexed[j]=(r&0xe0)|((g&0xe0)>>3)|((b&0xc0)>>6);
   }
-  image(indexed);
+  image(indexed,frameDelays[frameIndex]);
  }
  out.push(0x3b);
  return Uint8Array.from(out);

@@ -177,7 +177,10 @@ async function exportGif(){
    el("status").textContent="Encoding "+(i+1)+" of "+count+" GIF frames…";
    await new Promise(function(resolve){setTimeout(resolve,0);});
   }
-  var gif=DeveloperWorldGif.createGif(frames,width,height,45);
+  // Keep the fully built world visible for ten seconds before the loop
+  // restarts. Intermediate dates still advance every 450 ms.
+  var frameDelays=frames.map(function(_,index){return index===frames.length-1?1000:45;});
+  var gif=DeveloperWorldGif.createGif(frames,width,height,frameDelays);
   var download=URL.createObjectURL(new Blob([gif],{type:"image/gif"}));
   var link=document.createElement("a");
   link.href=download;

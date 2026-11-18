@@ -58,7 +58,7 @@ node export.cjs --input fixtures/demo-activity.json --out exports --progress 4
 
 The CLI exports deterministic self-contained SVGs. It does not require network access and does not currently render GIFs itself.
 
-Use the browser's **Download animated GIF** button for an on-demand GIF, or allow the trusted GitHub Actions refresh workflow to create one using headless Chromium.
+Use the browser's **Download animated GIF** button for an on-demand GIF, or allow the trusted GitHub Actions refresh workflow to create one using headless Chromium. The completed scene is held for **10 seconds** on every loop, allowing viewers to read the final world instead of watching it immediately reset to an empty chart.
 
 ## 4. Controls
 
