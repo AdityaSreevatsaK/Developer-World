@@ -7,6 +7,9 @@ on:
       - 'collect-github.cjs'
       - 'publish-real.cjs'
       - 'renderer.js'
+      - 'gif.js'
+      - 'index.html'
+      - 'tests/browser-gif-smoke.cjs'
       - '.github/workflows/refresh.yml'
   schedule:
     - cron: "37 02 * * *"
