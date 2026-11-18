@@ -138,7 +138,7 @@ function calendarFor(data,progress){
  */
 function pixelTile(x,y,level,count,arch,p){
  const detail=count>=80?3:count>=24?2:count>=8?1:0;
- const rect=(a,b,w,h,c,extra="")=>`<rect x="${a}" y="${b}" width="${w}" height="${h}" rx="1" fill="${c}" ${extra}/ >`.replace("/ >","/>");
+ const rect=(a,b,w,h,c,extra="")=>`<rect x="${a}" y="${b}" width="${w}" height="${h}" rx="1" fill="${c}" ${extra}/>`;
  const path=(d,c)=>`<path d="${d}" fill="${c}"/>`;
  const circle=(a,b,r,c)=>`<circle cx="${a}" cy="${b}" r="${r}" fill="${c}"/>`;
  const line=(d,c,w=1)=>`<path d="${d}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round"/>`;
@@ -276,8 +276,8 @@ function calendarRender(raw,options={}){
  for(const [d,name] of [[0,"Sun"],[2,"Tue"],[4,"Thu"],[6,"Sat"]])out.push(textAt(19,y0+d*dy+12,name,9,palette.muted,600));
  out.push(textAt(740,76,grid.hasOfficialCalendar?"GITHUB CONTRIBUTION LEVEL":"RECORDED UNITS",8,palette.muted,800));
  for(const [i,label] of (grid.hasOfficialCalendar?["0","Q1","Q2","Q3","Q4"]:["0","1–2","3–5","6–9","10+"]).entries()){
-  const lx=(grid.hasOfficialCalendar?847:834)+i*(grid.hasOfficialCalendar?48:51),shade=[palette.dim,palette.sand,palette.grass2,palette.grass,palette.bright][i];
-  out.push(rect(lx,67,10,10,shade,2,`stroke="${palette.stroke}" stroke-width=".7"`));
+  const lx=(grid.hasOfficialCalendar?847:834)+i*(grid.hasOfficialCalendar?48:51),shade=(arch?[palette.sea,palette.sea,palette.wave,palette.grass,palette.gold]:[palette.dim,palette.dim,palette.grass,palette.grass2,palette.gold])[i];
+  out.push(rect(lx,67,10,10,shade,2,`stroke="${i===4?palette.gold:palette.stroke}" stroke-width="${i===4?1.8:.7}"`));
   out.push(textAt(lx+13,76,label,8,palette.muted,600));
  }
  const landmarkByDate=new Map();
@@ -285,7 +285,7 @@ function calendarRender(raw,options={}){
   const i=visible.findIndex(r=>r.full_name===name);
   if(i>=0)landmarkByDate.set(date,{index:i,name});
  }
- const activeFill=[palette.dim,palette.sand,palette.grass2,palette.grass,palette.bright];
+
  // Tiles are strictly arranged in Sunday-to-Saturday rows and chronological week columns.
  for(const cell of grid.cells){
   const x=x0+cell.w*dx,y=y0+cell.d*dy,unrevealed=revealDate!==undefined&&cell.date>revealDate&&!cell.future,level=unrevealed?0:cell.level;
