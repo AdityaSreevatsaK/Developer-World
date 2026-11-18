@@ -4,7 +4,7 @@
   "private": true,
   "description": "Open-source animated GitHub contribution worlds: archipelago and village",
   "scripts": {
-    "test": "node --test ./tests/world.test.cjs ./tests/gif.test.cjs ./tests/showcase.test.cjs ./tests/real-account.test.cjs",
+    "test": "node --test ./tests/world.test.cjs ./tests/gif.test.cjs ./tests/showcase.test.cjs ./tests/real-account.test.cjs ./tests/intensity.test.cjs",
     "preview": "node ./server.cjs",
     "export": "node ./export.cjs",
     "showcase": "node ./generate-showcase.cjs",
