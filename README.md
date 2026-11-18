@@ -59,7 +59,7 @@ For the simplest automated experience, **fork this repository**, go to **Setting
 - **Four visual growth tiers:** GitHub's NONE/FIRST/SECOND/THIRD/FOURTH_QUARTILE data determines intensity. Stronger silhouette separation across tiers is planned.
 - **Timeline:** The animation reveals **real recorded calendar dates**, never invented activity.
 - **Real vs demo:** Synthetic examples are always labelled. The default preview uses real data only when present. Missing real data is reported, never silently substituted with a demo.
-- **Exports:** SVG animations may be suppressed by GitHub's image proxy; provide a still SVG for accessibility. The browser can generate a standards-compatible animated GIF locally.
+- **Exports:** SVG animations may be suppressed by GitHub's image proxy; provide a still SVG for accessibility. The browser can generate a standards-compatible animated GIF locally. **The completed world stays visible for 10 seconds before each GIF loop restarts**, while build-up frames advance every 450 ms.
 - **Privacy:** Publishing previews and \`real-activity.json\` makes the collected public account metadata visible in your repository. Inspect it before committing to a fork.
 
 ## Quick commands
