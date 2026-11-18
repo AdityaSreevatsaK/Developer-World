@@ -10,15 +10,15 @@ The two sides represent the **same saved, genuine GitHub account snapshot**. The
 
 ### The Isles of Code, dark
 
-| Before (master) | Proposed redesign (this PR) |
+| Before (pinned master baseline) | Proposed redesign (this PR) |
 | --- | --- |
-| ![Original real-account archipelago, weak differences between levels](https://raw.githubusercontent.com/AdityaSreevatsaK/Developer-World/master/previews/real-archipelago-dark.svg) | ![New real-account archipelago with tiny sandbars and large gold-framed citadels](../previews/real-archipelago-dark.svg) |
+| ![Original real-account archipelago, weak differences between levels](https://raw.githubusercontent.com/AdityaSreevatsaK/Developer-World/b411c3ee63e76f99e3385177e76448c5f7a3f385/previews/real-archipelago-dark.svg) | ![New real-account archipelago with tiny sandbars and large gold-framed citadels](../previews/real-archipelago-dark.svg) |
 
 ### The Little Buildtown, light
 
 | Before (master) | Proposed redesign (this PR) |
 | --- | --- |
-| ![Original real-account village, weak differences between levels](https://raw.githubusercontent.com/AdityaSreevatsaK/Developer-World/master/previews/real-village-light.svg) | ![New real-account village with clearly differentiated sprouts, cottages, workshops and civic halls](../previews/real-village-light.svg) |
+| ![Original real-account village, weak differences between levels](https://raw.githubusercontent.com/AdityaSreevatsaK/Developer-World/b411c3ee63e76f99e3385177e76448c5f7a3f385/previews/real-village-light.svg) | ![New real-account village with clearly differentiated sprouts, cottages, workshops and civic halls](../previews/real-village-light.svg) |
 
 ### Other variations
 
