@@ -12,10 +12,10 @@
 
 | The Isles of Code: archipelago | The Little Buildtown: village |
 | :---: | :---: |
-| ![GitHub contribution calendar as an archipelago, generated from the maintainer's real GitHub activity](previews/real-archipelago-dark.svg) | ![GitHub contribution calendar as a miniature village, generated from the maintainer's real GitHub activity](previews/real-village-light.svg) |
-| [Light archipelago](previews/real-archipelago-light.svg) · [Motion-free archipelago](previews/real-archipelago-still.svg) | [Dark village](previews/real-village-dark.svg) |
+| ![Real GitHub contributions evolving into animated miniature islands](previews/real-archipelago.gif) | ![GitHub contribution calendar as a miniature village, generated from the maintainer's real GitHub activity](previews/real-village-light.svg) |
+| [Static dark](previews/real-archipelago-dark.svg) · [Light archipelago](previews/real-archipelago-light.svg) · [Motion-free fallback](previews/real-archipelago-still.svg) | [Dark village](previews/real-village-dark.svg) |
 
-The initial images are a publicly visible snapshot of **the maintainer's account, AdityaSreevatsaK**, not data generated for visitors. **You can create a world from your own GitHub account** by following the instructions below. Generated statistics are truthful to the source's scope and collection date; they are never a live-updating page view.
+The opening GIF reveals the maintainer's actual contributions chronologically; the adjacent village view is a static SVG. Both are publicly visible snapshots of **the maintainer's account, AdityaSreevatsaK**, not data generated for visitors. **You can create a world from your own GitHub account** by following the instructions below. Generated statistics are truthful to the source's scope and collection date; they are never a live-updating page view.
 
 ## Run locally
 
