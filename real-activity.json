@@ -1,16 +1,31 @@
 {
   "schema_version": "1",
   "source": "github",
-  "generated_at": "2026-11-18T13:41:54.276Z",
+  "generated_at": "2026-11-18T17:02:54.926Z",
   "user": {
     "login": "AdityaSreevatsaK",
     "url": "https://github.com/AdityaSreevatsaK"
   },
   "repositories": [
     {
+      "full_name": "AdityaSreevatsaK/Code-Factory",
+      "name": "Code-Factory",
+      "url": "https://github.com/AdityaSreevatsaK/Code-Factory"
+    },
+    {
       "full_name": "AdityaSreevatsaK/Developer-World",
       "name": "Developer-World",
       "url": "https://github.com/AdityaSreevatsaK/Developer-World"
+    },
+    {
+      "full_name": "AdityaSreevatsaK/GitHub-Activity-Studio",
+      "name": "GitHub-Activity-Studio",
+      "url": "https://github.com/AdityaSreevatsaK/GitHub-Activity-Studio"
+    },
+    {
+      "full_name": "AdityaSreevatsaK/GitHub-Constellation",
+      "name": "GitHub-Constellation",
+      "url": "https://github.com/AdityaSreevatsaK/GitHub-Constellation"
     },
     {
       "full_name": "AdityaSreevatsaK/langchain-redis",
@@ -31,6 +46,11 @@
       "full_name": "AdityaSreevatsaK/Taiyous-Anime-Library",
       "name": "Taiyous-Anime-Library",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Anime-Library"
+    },
+    {
+      "full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "name": "Taiyous-Manga-Library",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library"
     },
     {
       "full_name": "AdityaSreevatsaK/Taiyous-Movies-TV-Library",
@@ -58,33 +78,22 @@
       "url": "https://github.com/AdityaSreevatsaK/Useful-Code-Snippets"
     },
     {
-      "full_name": "AdityaSreevatsaK/wheelgap",
-      "name": "wheelgap",
-      "url": "https://github.com/AdityaSreevatsaK/wheelgap"
-    },
-    {
       "full_name": "AdityaSreevatsaK/wheels",
       "name": "wheels",
       "url": "https://github.com/AdityaSreevatsaK/wheels"
+    },
+    {
+      "full_name": "langchain-ai/langchain-redis",
+      "name": "langchain-redis",
+      "url": "https://github.com/langchain-ai/langchain-redis"
+    },
+    {
+      "full_name": "wheelgap/wheels",
+      "name": "wheels",
+      "url": "https://github.com/wheelgap/wheels"
     }
   ],
   "activity": [
-    {
-      "id": "public-20492324423",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "occurred_at": "2026-11-18T08:18:20Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20493946282",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/wheelgap",
-      "occurred_at": "2026-11-18T08:38:00Z",
-      "url": "https://github.com/AdityaSreevatsaK/wheelgap",
-      "count": 1
-    },
     {
       "id": "public-20499575540",
       "kind": "issue_opened",
@@ -188,12 +197,292 @@
       "occurred_at": "2026-11-18T13:40:15Z",
       "url": "https://github.com/AdityaSreevatsaK/wheels",
       "count": 1
+    },
+    {
+      "id": "public-20521276950",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/GitHub-Constellation",
+      "occurred_at": "2026-11-18T13:43:12Z",
+      "url": "https://github.com/AdityaSreevatsaK/GitHub-Constellation",
+      "count": 1
+    },
+    {
+      "id": "public-20522976591",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Code-Factory",
+      "occurred_at": "2026-11-18T14:01:02Z",
+      "url": "https://github.com/AdityaSreevatsaK/Code-Factory",
+      "count": 1
+    },
+    {
+      "id": "public-20523712256",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-18T14:08:40Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20523762222",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Anime-Library",
+      "occurred_at": "2026-11-18T14:09:12Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Anime-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20523775467",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Movies-TV-Library",
+      "occurred_at": "2026-11-18T14:09:20Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Movies-TV-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20524008301",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "occurred_at": "2026-11-18T14:11:58Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-20524090333",
+      "kind": "issue_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Anime-Library",
+      "occurred_at": "2026-11-18T14:12:47Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Anime-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20524096032",
+      "kind": "issue_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Anime-Library",
+      "occurred_at": "2026-11-18T14:12:52Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Anime-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20525686985",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-18T14:29:35Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20527034859",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Shared-Core",
+      "occurred_at": "2026-11-18T14:43:09Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Shared-Core",
+      "count": 1
+    },
+    {
+      "id": "public-20527428119",
+      "kind": "issue_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Shared-Core",
+      "occurred_at": "2026-11-18T14:47:09Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Shared-Core",
+      "count": 1
+    },
+    {
+      "id": "public-20527689752",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-18T14:49:33Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20527988178",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "occurred_at": "2026-11-18T14:52:22Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-20528146048",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "occurred_at": "2026-11-18T14:54:05Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20528588348",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-18T14:58:37Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20529032390",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Anime-Library",
+      "occurred_at": "2026-11-18T15:03:09Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Anime-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20529374701",
+      "kind": "pr_opened",
+      "repo_full_name": "wheelgap/wheels",
+      "occurred_at": "2026-11-18T15:06:33Z",
+      "url": "https://github.com/wheelgap/wheels",
+      "count": 1
+    },
+    {
+      "id": "public-20529498521",
+      "kind": "pr_opened",
+      "repo_full_name": "wheelgap/wheels",
+      "occurred_at": "2026-11-18T15:07:44Z",
+      "url": "https://github.com/wheelgap/wheels",
+      "count": 1
+    },
+    {
+      "id": "public-20530708534",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "occurred_at": "2026-11-18T15:20:21Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-20531238712",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Movies-TV-Library",
+      "occurred_at": "2026-11-18T15:25:48Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Movies-TV-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20532211188",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-18T15:35:28Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20532829139",
+      "kind": "issue_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-18T15:41:24Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20532905409",
+      "kind": "issue_opened",
+      "repo_full_name": "AdityaSreevatsaK/Developer-World",
+      "occurred_at": "2026-11-18T15:42:09Z",
+      "url": "https://github.com/AdityaSreevatsaK/Developer-World",
+      "count": 1
+    },
+    {
+      "id": "public-20534808258",
+      "kind": "issue_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "occurred_at": "2026-11-18T16:01:00Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-20534838182",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-18T16:01:17Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20534850375",
+      "kind": "issue_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Movies-TV-Library",
+      "occurred_at": "2026-11-18T16:01:23Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Movies-TV-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20535020879",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Open-Source-Metro",
+      "occurred_at": "2026-11-18T16:03:04Z",
+      "url": "https://github.com/AdityaSreevatsaK/Open-Source-Metro",
+      "count": 1
+    },
+    {
+      "id": "public-20535504328",
+      "kind": "pr_opened",
+      "repo_full_name": "langchain-ai/langchain-redis",
+      "occurred_at": "2026-11-18T16:07:22Z",
+      "url": "https://github.com/langchain-ai/langchain-redis",
+      "count": 1
+    },
+    {
+      "id": "public-20536332391",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-18T16:14:03Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20537704385",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-18T16:25:55Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20537888721",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Open-Source-Metro",
+      "occurred_at": "2026-11-18T16:27:33Z",
+      "url": "https://github.com/AdityaSreevatsaK/Open-Source-Metro",
+      "count": 1
+    },
+    {
+      "id": "public-20538583230",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-18T16:33:44Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20539331607",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-18T16:40:27Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20541233441",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/GitHub-Activity-Studio",
+      "occurred_at": "2026-11-18T16:57:04Z",
+      "url": "https://github.com/AdityaSreevatsaK/GitHub-Activity-Studio",
+      "count": 1
+    },
+    {
+      "id": "public-20541643475",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Developer-World",
+      "occurred_at": "2026-11-18T17:00:50Z",
+      "url": "https://github.com/AdityaSreevatsaK/Developer-World",
+      "count": 1
     }
   ],
   "contribution_calendar": {
     "from": "2025-11-19",
     "to": "2026-11-18",
-    "total_contributions": 1800,
+    "total_contributions": 1879,
     "days": [
       {
         "date": "2025-11-19",
@@ -2017,7 +2306,7 @@
       },
       {
         "date": "2026-11-18",
-        "count": 136,
+        "count": 215,
         "level": "FOURTH_QUARTILE"
       }
     ]
@@ -2025,7 +2314,7 @@
   "coverage": {
     "calendar": "GitHub GraphQL contributionsCollection, visible to the workflow token",
     "events": "GitHub REST public events, up to 300 most recent events; incomplete by design",
-    "rest_events_checked": 98,
+    "rest_events_checked": 199,
     "public_event_warning": null
   }
 }
