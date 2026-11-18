@@ -1,12 +1,12 @@
 # Visual review: contribution intensity redesign
 
-**Status:** Implemented on branch \`fix/contribution-intensity-contrast\`; pending review and merge. Issue [#1](https://github.com/AdityaSreevatsaK/Developer-World/issues/1).
+**Status:** Implemented on branch `fix/contribution-intensity-contrast`; pending review and merge. Issue [#1](https://github.com/AdityaSreevatsaK/Developer-World/issues/1).
 
 **Purpose:** Low-numbered contribution days must not resemble high-numbered days when a GitHub profile embeds a 1120×350 miniature-world visualisation at roughly half its native width.
 
 ## Actual account, before and after
 
-The two sides represent the **same saved, genuine GitHub account snapshot**. The source is \`real-activity.json\`, with **1,771 GitHub-visible contributions across 99 active dates** collected on 18 November 2026. These previews have not been padded with synthetic contributions.
+The two sides represent the **same saved, genuine GitHub account snapshot**. The source is `real-activity.json`, with **1,771 GitHub-visible contributions across 99 active dates** collected on 18 November 2026. These previews have not been padded with synthetic contributions.
 
 ### The Isles of Code, dark
 
@@ -38,13 +38,13 @@ The two sides represent the **same saved, genuine GitHub account snapshot**. The
 | THIRD_QUARTILE | Developed island with workshop | Taller workshop, chimney and windows | Noticeably taller and denser structure |
 | FOURTH_QUARTILE | Full-tile gold-framed citadel, tower and beacon | Full-width gold-framed civic hall and tall tower | Strong outline, larger footprint, maximum height and detail |
 
-GitHub determines the quartile **independently of any fixed local numeric thresholds**. Each day retains its **exact GraphQL \`contributionCount\`** and \`contributionLevel\`. More exact contributions in a fixed quartile may add 1–3 small accents, but never promote the day to a higher quartile or imply another GitHub event happened.
+GitHub determines the quartile **independently of any fixed local numeric thresholds**. Each day retains its **exact GraphQL `contributionCount`** and `contributionLevel`. More exact contributions in a fixed quartile may add 1–3 small accents, but never promote the day to a higher quartile or imply another GitHub event happened.
 
 ## Tests and limits
 
 - Five new deterministic Node tests cover each silhouette and both world variants, real-versus-synthetic labelling, unknown and future cells, exact counts, within-tier accents and chronological animation.
 - CI runs all tests, exports and browser GIF smoke on Windows/Ubuntu using **synthetic** test data, without GitHub tokens.
-- The feature branch's five real-account **SVG** previews are regenerated from the unchanged verified snapshot. The committed \`real-archipelago.gif\` still shows the previous generation until the trusted default-branch refresh runs after approval and merge.
+- The feature branch's five real-account **SVG** previews are regenerated from the unchanged verified snapshot. The committed `real-archipelago.gif` still shows the previous generation until the trusted default-branch refresh runs after approval and merge.
 - GitHub README image-proxy accessibility and smaller mobile widths still deserve manual review. A visual improvement in GitHub's source viewer does not guarantee all image consumers render CSS-based SVG motion.
 
 ## Acceptance checklist
