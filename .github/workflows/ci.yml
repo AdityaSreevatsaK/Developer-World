@@ -1,0 +1,70 @@
+name: "CI: tests, SVG exports and browser GIF"
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: "Node 22 · ${{ matrix.os }}"
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Set up Node 22
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - name: Run all offline unit, CLI and HTTP tests
+        run: npm test
+      - name: Export offline SVG variants
+        run: npm run export
+      - name: Verify SVG provenance and geometry
+        run: node tests/verify-exports.cjs
+      - name: Render real browser screenshots (synthetic input only)
+        if: matrix.os == 'ubuntu-latest'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node server.cjs > "$RUNNER_TEMP/developer-world-preview.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:8787/index.html > /dev/null; then break; fi
+            sleep 1
+          done
+          chrome=$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || true)
+          test -n "$chrome" || { echo 'Chrome or Chromium unavailable'; exit 1; }
+          mkdir -p screenshots
+          "$chrome" --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --hide-scrollbars --window-size=1280,930 --virtual-time-budget=4500 --screenshot="$PWD/screenshots/archipelago-showcase.png" "http://127.0.0.1:8787/?sample=showcase&layout=archipelago&theme=dark"
+          "$chrome" --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --hide-scrollbars --window-size=1280,930 --virtual-time-budget=4500 --screenshot="$PWD/screenshots/village-showcase.png" "http://127.0.0.1:8787/?sample=showcase&layout=village&theme=light"
+          "$chrome" --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --virtual-time-budget=4500 --dump-dom "http://127.0.0.1:8787/?sample=showcase&layout=archipelago&theme=dark" > screenshots/archipelago-dom.html
+          "$chrome" --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --virtual-time-budget=4500 --dump-dom "http://127.0.0.1:8787/?sample=showcase&layout=village&theme=light" > screenshots/village-dom.html
+          node -e "const fs=require('fs');const a=fs.readFileSync('screenshots/archipelago-showcase.png'),b=fs.readFileSync('screenshots/village-showcase.png');for(const x of [a,b]){if(x.length<15000||x.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('PNG invalid');}if(a.equals(b))throw Error('Layouts produced identical screenshots');for(const [mode,title] of [['archipelago','The Isles of Code'],['village','The Little Buildtown']]){const h=fs.readFileSync('screenshots/'+mode+'-dom.html','utf8');if((h.match(/data-date=/g)||[]).length!==371||!h.includes('212 active dates')||!h.includes(title))throw Error('Showcase DOM invalid: '+mode);}"
+      - name: Test actual browser GIF exporter without a token
+        if: matrix.os == 'ubuntu-latest'
+        timeout-minutes: 4
+        run: node tests/browser-gif-smoke.cjs
+      - name: Upload visual smoke previews
+        if: matrix.os == 'ubuntu-latest'
+        uses: actions/upload-artifact@v7
+        with:
+          name: developer-world-browser-previews
+          path: |
+            screenshots/*.png
+            exports/*.svg
+            exports/*.gif
+          if-no-files-found: error
+          retention-days: 7

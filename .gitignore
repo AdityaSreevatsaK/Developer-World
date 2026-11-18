@@ -1,0 +1,11 @@
+exports/
+node_modules/
+.DS_Store
+screenshots/
+
+# Never commit local credentials or temporary downloads
+.env
+.env.*
+!.env.example
+*.log
+*.zip

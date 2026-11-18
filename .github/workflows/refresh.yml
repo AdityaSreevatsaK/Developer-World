@@ -1,0 +1,74 @@
+name: "Refresh real contribution previews"
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'collect-github.cjs'
+      - 'publish-real.cjs'
+      - 'renderer.js'
+      - '.github/workflows/refresh.yml'
+  schedule:
+    - cron: "37 02 * * *"
+  workflow_dispatch:
+    inputs:
+      username:
+        description: "GitHub login to render; defaults to DEVELOPER_WORLD_USERNAME variable or repository owner"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: developer-world-real-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    name: Fetch verified GitHub calendar, generate SVG and GIF, commit public outputs
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_USERNAME: ${{ inputs.username || vars.DEVELOPER_WORLD_USERNAME || github.repository_owner }}
+    steps:
+      - name: Check out trusted default branch
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: true
+      - name: Set up Node 22
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - name: Offline regression checks
+        run: npm test
+      - name: Collect authentic account calendar, not sample activity
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: node collect-github.cjs --login "$GITHUB_USERNAME"
+      - name: Generate source-verified real-account SVGs
+        shell: bash
+        run: node publish-real.cjs --login "$GITHUB_USERNAME"
+      - name: Generate and test genuine 16-frame historical GIF in Chromium
+        env:
+          DW_SAMPLE: real
+        timeout-minutes: 4
+        run: node tests/browser-gif-smoke.cjs
+      - name: Verify account identity, real provenance and generated files
+        shell: bash
+        run: |
+          set -euo pipefail
+          node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('real-activity.json','utf8'));if(d.source!=='github'||!d.contribution_calendar||d.user.login.toLowerCase()!==process.env.GITHUB_USERNAME.toLowerCase())throw Error('Unverified account');for(const p of ['previews/real-archipelago-dark.svg','previews/real-village-light.svg']){const s=fs.readFileSync(p,'utf8');if(!s.includes('REAL GITHUB CONTRIBUTIONS')||s.includes('SYNTHETIC DEMO'))throw Error('Unverified real preview '+p);}const g=fs.readFileSync('previews/real-archipelago.gif');if(g.subarray(0,6).toString('ascii')!=='GIF89a')throw Error('Invalid GIF');console.log(d.user.login,d.contribution_calendar.total_contributions,'verified public contributions');"
+      - name: Commit only verified public snapshot and real image outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- real-activity.json previews/real-archipelago-dark.svg previews/real-archipelago-light.svg previews/real-archipelago-still.svg previews/real-village-dark.svg previews/real-village-light.svg previews/real-archipelago.gif
+          if git diff --cached --quiet; then
+            echo "No public preview changes to commit."
+          else
+            git commit -m "data: refresh verified GitHub-visible contribution art [skip ci]"
+            git push origin "HEAD:${GITHUB_REF}"
+          fi
