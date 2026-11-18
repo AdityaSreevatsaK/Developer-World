@@ -17,7 +17,8 @@ function readGif(bytes){
  const width=u16(),height=u16(),packed=u8();u8();u8();
  assert.ok(packed&128,"global colour table required");
  const palette=3*(1<<((packed&7)+1));at+=palette;
- const frames=[];
+ const frames=[],delays=[];
+ let pendingDelay=null;
  function subblocks(){
   const out=[];let size;
   while((size=u8())!==0){for(let j=0;j<size;j++)out.push(u8());}
@@ -28,7 +29,7 @@ function readGif(bytes){
   if(marker===0x3b)break;
   if(marker===0x21){
    const kind=u8();
-   if(kind===0xf9){const length=u8();at+=length;assert.equal(u8(),0);}
+   if(kind===0xf9){const length=u8();assert.equal(length,4);u8();pendingDelay=u16();u8();assert.equal(u8(),0);}
    else{const len=u8();at+=len;subblocks();}
    continue;
   }
@@ -64,10 +65,10 @@ function readGif(bytes){
    old=entry;
   }
   assert.equal(decoded.length,width*height,"fully decoded frame");
-  frames.push(decoded);
+  frames.push(decoded);delays.push(pendingDelay);pendingDelay=null;
  }
  assert.equal(at,bytes.length,"no bytes after trailer");
- return {width,height,frames};
+ return {width,height,frames,delays};
 }
 test("creates a valid deterministic animated GIF89a with a shared 256-colour palette",()=>{
  const a=solid(8,6,240,35,23),b=solid(8,6,22,176,245);
@@ -114,4 +115,24 @@ test("solid-colour GIFs compress dramatically and do not mutate source frames",(
  assert.ok(output.byteLength<3000);
  assert.deepEqual(input,previous);
  assert.equal(readGif(output).frames.length,3);
+});
+
+test("encoder gives the complete world ten seconds before the seamless loop resets",()=>{
+ const start=solid(3,2,20,40,60),middle=solid(3,2,90,150,100),complete=solid(3,2,235,205,95);
+ const frames=[start,middle,complete],delays=[45,45,1000];
+ const original=delays.slice();
+ const bytes=createGif(frames,3,2,delays);
+ const parsed=readGif(bytes);
+ assert.deepEqual(parsed.delays,[45,45,1000],"last frame must hold for ten seconds");
+ assert.equal(parsed.frames.length,3);
+ assert.deepEqual(new Set(parsed.frames[2]),new Set([rgb332(235,205,95)]));
+ assert.deepEqual(delays,original,"caller-owned duration list must not change");
+ assert.ok(Buffer.from(bytes).includes(Buffer.from("NETSCAPE2.0")),"finished hold still loops");
+});
+test("per-frame GIF delays reject missing entries, excess entries and invalid values",()=>{
+ const frame=solid(2,2,0,0,0);
+ for(const invalid of [[45],[45,50,1000],[45,1],[45,1001],[45,0],[45,2.5],["45",45],[],null]){
+  assert.throws(()=>createGif([frame,frame],2,2,invalid),/Invalid GIF delay/);
+ }
+ assert.deepEqual(readGif(createGif([frame,frame],2,2,70)).delays,[70,70],"scalar callers remain compatible");
 });
