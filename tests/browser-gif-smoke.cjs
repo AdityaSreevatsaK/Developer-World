@@ -13,6 +13,39 @@ async function until(callback,label,timeoutMs=20000){
  }
  throw Error(label+" timed out"+(last?": "+last.message:""));
 }
+
+// Parse actual GIF89a block structure, rather than merely trusting the JS
+// arguments passed to the encoder. We must catch regressions in written delays.
+function gifFrameDelays(bytes){
+ if(bytes.subarray(0,6).toString("ascii")!=="GIF89a")throw Error("Not a GIF89a");
+ let at=6;
+ const u8=()=>{if(at>=bytes.length)throw Error("Truncated GIF");return bytes[at++];};
+ const u16=()=>u8()|(u8()<<8);
+ u16();u16();const logicalPacked=u8();u8();u8();
+ if(logicalPacked&0x80)at+=3*(1<<((logicalPacked&7)+1));
+ const delays=[];let pending=null;
+ const skipBlocks=()=>{while(true){const len=u8();if(!len)break;at+=len;if(at>bytes.length)throw Error("Truncated GIF subblock");}};
+ while(at<bytes.length){
+  const block=u8();
+  if(block===0x3b)break;
+  if(block===0x21){
+   const type=u8(),length=u8();
+   if(type===0xf9){
+    if(length!==4)throw Error("Unexpected GIF GCE size");
+    u8();pending=u16();u8();if(u8()!==0)throw Error("Invalid GIF GCE terminator");
+   }else{at+=length;skipBlocks();}
+  }else if(block===0x2c){
+   for(let i=0;i<8;i++)u8();
+   const packed=u8();
+   if(packed&0x80)at+=3*(1<<((packed&7)+1));
+   u8();skipBlocks();
+   delays.push(pending);pending=null;
+  }else throw Error("Unexpected GIF block "+block);
+ }
+ if(at!==bytes.length)throw Error("Unexpected bytes after GIF trailer");
+ return delays;
+}
+
 function chromeExecutable(){
  for(const candidate of [process.env.CHROME_BIN,"google-chrome","google-chrome-stable","chromium"]){
   if(!candidate)continue;
@@ -98,6 +131,10 @@ async function main(){
   const encoded=await evaluate('(() => {const bytes=window.__gifSmokeBytes;if(!bytes)throw Error("GIF capture missing");let parts=[];for(let i=0;i<bytes.length;i+=16384)parts.push(String.fromCharCode(...bytes.subarray(i,i+16384)));return btoa(parts.join(""));})()');
   const sample=Buffer.from(encoded,"base64");
   if(sample.length!==gif.size||sample.subarray(0,6).toString("ascii")!=="GIF89a")throw Error("Browser GIF bytes invalid");
+  const delays=gifFrameDelays(sample);
+  if(delays.length!==16||delays.slice(0,-1).some(n=>n!==45)||delays.at(-1)!==1000)
+   throw Error("Completed-world GIF hold is not ten seconds: "+JSON.stringify(delays));
+  console.log("Verified animated GIF timing:",JSON.stringify(delays),"centiseconds");
   const output=path.resolve(__dirname,"../"+(mode==="real"?"previews/real-archipelago.gif":"exports/archipelago-showcase.gif"));
   fs.mkdirSync(path.dirname(output),{recursive:true});
   fs.writeFileSync(output,sample);
