@@ -129,6 +129,93 @@ function calendarFor(data,progress){
  });
  return {cells,lookup,anchors,featured,byRepo,first,asof,seen,outside,hasOfficialCalendar,unknownDays:cells.filter(c=>c.unknown).length,observed:cells.reduce((s,c)=>s+c.units,0),activeDays:cells.filter(c=>c.units>0).length};
 }
+
+/**
+ * Compact 15x16 tile art. Levels come from GitHub's verified contribution
+ * quartiles (or labelled demo-event tiers), never from fabricated events.
+ * Footprints 0/5/9/12/15 and silhouettes change in addition to colour.
+ * Exact daily count adds optional, monotonic detail only within its level.
+ */
+function pixelTile(x,y,level,count,arch,p){
+ const detail=count>=80?3:count>=24?2:count>=8?1:0;
+ const rect=(a,b,w,h,c,extra="")=>`<rect x="${a}" y="${b}" width="${w}" height="${h}" rx="1" fill="${c}" ${extra}/>`;
+ const path=(d,c)=>`<path d="${d}" fill="${c}"/>`;
+ const circle=(a,b,r,c)=>`<circle cx="${a}" cy="${b}" r="${r}" fill="${c}"/>`;
+ const line=(d,c,w=1)=>`<path d="${d}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round"/>`;
+ const ground=arch?[p.sea,p.sea,p.wave,p.grass,p.gold]:[p.dim,p.dim,p.grass,p.grass2,p.gold];
+ const silhouettes=arch?["quiet","sandbar","woodland","workshop","citadel"]:["quiet","sprout","cottage","workshop","townhall"];
+ const ring=level===4?p.gold:p.stroke;
+ let out=`<g transform="translate(${x} ${y})" class="dw-intensity dw-intensity-${arch?"isle":"town"} dw-tier-${level}" data-art-level="${level}" data-art-detail="${detail}" data-silhouette="${silhouettes[level]}" aria-hidden="true">`;
+ out+=rect(0,0,15,16,ground[level],`stroke="${ring}" stroke-width="${level===4?1.8:.8}" opacity="${level?1:.82}"`);
+ if(!level){
+  // Empty plots have no structures; quiet ≠ an invented contribution.
+  if(!arch)out+=rect(0,13,15,3,p.shade,`opacity=".45"`);
+ }else if(arch){
+  if(level===1){
+   // Tiny sandbar, almost entirely surrounded by water.
+   out+=path("M5 11l2-3 4 2-1 3H5Z",p.sand);
+   out+=rect(7,8,1.5,3,p.grass2);
+  }else if(level===2){
+   // Half-tile vegetation-covered island with one tree.
+   out+=path("M2 9l4-5 5 1 2 4-2 4H4Z",p.sand);
+   out+=path("M4 8l3-3 3 1 2 3-3 2H5Z",p.grass2);
+   out+=rect(7,5,1.5,6,p.shade)+circle(8,5,2.2,p.grass);
+  }else if(level===3){
+   // Nearly full landmass and a roofed, illuminated workshop.
+   out+=path("M1 11l3-7 6-2 4 5-2 7H3Z",p.sand);
+   out+=path("M2 9l3-5 5-1 3 4-1 4-6 2Z",p.grass2);
+   out+=rect(4,7,9,7,p.wall,`stroke="${p.shade}" stroke-width=".8"`);
+   out+=path("M3 7l5-5 5 5Z",p.roof);
+   out+=rect(7,10,3,4,p.gold,`class="dw-lantern"`);
+   if(detail>=1)out+=rect(11,9,1.4,2,p.shade);
+  }else{
+   // Full-size citadel has a frame, multi-storey tower, roof and beacon.
+   out+=rect(1,1,13,14,p.grass2,`stroke="${p.shade}" stroke-width=".6"`);
+   out+=path("M2 12l1-6 3-2 4 1 3 3v5H3Z",p.grass);
+   out+=rect(3,7,9,7,p.wall,`stroke="${p.shade}" stroke-width="1"`);
+   out+=rect(5,3,5,11,p.wall,`stroke="${p.shade}" stroke-width=".8"`);
+   out+=path("M4 3L7.5 0 11 3Z",p.roof);
+   out+=rect(6,6,2,3,p.gold,`class="dw-lantern"`);
+   out+=rect(10,9,1.5,2,p.shade)+circle(12,2,1.3,p.gold);
+   if(detail>=1)out+=rect(4,10,1.5,2,p.gold);
+   if(detail>=2)out+=rect(8,10,1.5,2,p.gold);
+   if(detail>=3)out+=circle(2,3,1,p.gold);
+  }
+ }else{
+  out+=rect(0,13,15,3,p.sand,`opacity=".8"`);
+  if(level===1){
+   // A sprout, not a miniature version of the level-4 hall.
+   out+=rect(7,10,1.4,4,p.shade);
+   out+=path("M7 11L4 8l3 1 3-2-2 4Z",p.grass2);
+   out+=circle(3,12,1,p.gold);
+  }else if(level===2){
+   // One low cottage.
+   out+=rect(4,9,8,5,p.wall,`stroke="${p.shade}" stroke-width=".7"`);
+   out+=path("M3 9l5-4 5 4Z",p.roof);
+   out+=rect(8,11,2,3,p.gold);
+  }else if(level===3){
+   // Two-storey workshop and chimney.
+   out+=rect(2,5,11,9,p.wall,`stroke="${p.shade}" stroke-width="1"`);
+   out+=path("M1 5l6.5-4L14 5Z",p.roof);
+   out+=rect(10,1,2,4,p.shade);
+   out+=rect(4,7,2,2,p.gold)+rect(9,7,2,2,p.gold)+rect(6,10,3,4,p.shade);
+   if(detail>=1)out+=rect(3,11,2,2,p.gold);
+  }else{
+   // Full-width civic hall and high central tower.
+   out+=rect(1,5,13,10,p.wall,`stroke="${p.shade}" stroke-width="1"`);
+   out+=path("M1 5l3-3 3 3 3-3 4 3Z",p.roof);
+   out+=rect(5,3,6,12,p.wall,`stroke="${p.shade}" stroke-width=".8"`);
+   out+=path("M4 3l4-3 4 3Z",p.roof);
+   out+=rect(7,5,2,3,p.gold,`class="dw-lantern"`);
+   out+=rect(3,9,2,3,p.gold)+rect(11,9,2,3,p.gold)+rect(7,11,2,4,p.shade);
+   if(detail>=1)out+=line("M2 14h12",p.gold,1.1);
+   if(detail>=2)out+=circle(13,2,1.3,p.gold);
+   if(detail>=3)out+=circle(2,2,1.3,p.gold);
+  }
+ }
+ return out+"</g>";
+}
+
 function calendarRender(raw,options={}){
  const data=normalise(raw),layout=options.layout||"archipelago",theme=options.theme||"dark";
  check(layout==="archipelago"||layout==="village","Invalid layout");
@@ -189,9 +276,9 @@ function calendarRender(raw,options={}){
  for(const m of monthLabels)out.push(textAt(x0+m.w*dx,87,m.month,9,palette.muted,700));
  for(const [d,name] of [[0,"Sun"],[2,"Tue"],[4,"Thu"],[6,"Sat"]])out.push(textAt(19,y0+d*dy+12,name,9,palette.muted,600));
  out.push(textAt(740,76,grid.hasOfficialCalendar?"GITHUB CONTRIBUTION LEVEL":"RECORDED UNITS",8,palette.muted,800));
- for(const [i,label] of ["none","1–2","3–5","6–9","10+"].entries()){
-  const lx=(grid.hasOfficialCalendar?847:834)+i*(grid.hasOfficialCalendar?48:51),shade=[palette.dim,palette.sand,palette.grass2,palette.grass,palette.bright][i];
-  out.push(rect(lx,67,10,10,shade,2,`stroke="${palette.stroke}" stroke-width=".7"`));
+ for(const [i,label] of (grid.hasOfficialCalendar?["0","Q1","Q2","Q3","Q4"]:["0","1–2","3–5","6–9","10+"]).entries()){
+  const lx=(grid.hasOfficialCalendar?847:834)+i*(grid.hasOfficialCalendar?48:51),shade=(arch?[palette.sea,palette.sea,palette.wave,palette.grass,palette.gold]:[palette.dim,palette.dim,palette.grass,palette.grass2,palette.gold])[i];
+  out.push(rect(lx,67,10,10,shade,2,`stroke="${i===4?palette.gold:palette.stroke}" stroke-width="${i===4?1.8:.7}"`));
   out.push(textAt(lx+13,76,label,8,palette.muted,600));
  }
  const landmarkByDate=new Map();
@@ -199,7 +286,7 @@ function calendarRender(raw,options={}){
   const i=visible.findIndex(r=>r.full_name===name);
   if(i>=0)landmarkByDate.set(date,{index:i,name});
  }
- const activeFill=[palette.dim,palette.sand,palette.grass2,palette.grass,palette.bright];
+
  // Tiles are strictly arranged in Sunday-to-Saturday rows and chronological week columns.
  for(const cell of grid.cells){
   const x=x0+cell.w*dx,y=y0+cell.d*dy,unrevealed=revealDate!==undefined&&cell.date>revealDate&&!cell.future,level=unrevealed?0:cell.level;
@@ -211,39 +298,8 @@ function calendarRender(raw,options={}){
   if(cell.future||cell.unknown||unrevealed){
    out.push(rect(x,y,tw,th,palette.dim,3,`opacity=".23" stroke="${palette.stroke}" stroke-width=".7"`));
    out.push(line(`M${x+4} ${y+5}l7 7`,palette.stroke,.8,`opacity=".5"`));
-  }else if(arch){
-   out.push(rect(x,y,tw,th,level?palette.wave:palette.sea,3,`stroke="${palette.stroke}" stroke-width=".7" opacity="${level?1:.84}"`));
-   if(!level){
-    if((hash(cell.date)%5)===0)out.push(line(`M${x+3} ${y+10}q3-2 6 0`,palette.wave,.9,`opacity=".5" class="dw-wave"`));
-   }else{
-    out.push(path(`M${x+3} ${y+4}l5-2 4 3 1 6-5 3-5-2-1-5Z`,activeFill[level]));
-    if(level>=2)out.push(rect(x+5,y+5,5,6,palette.grass,1));
-    if(level===2)out.push(circle(x+10,y+7,1.8,palette.grass2));
-    if(level>=3){
-     out.push(rect(x+4,y+6,8,6,palette.wall,1));
-     out.push(path(`M${x+3} ${y+6}l5-4 5 4Z`,palette.roof));
-     out.push(rect(x+7,y+8,2,3,palette.gold,.5,`class="dw-lantern"`));
-    }
-    if(level>=4)out.push(line(`M${x+11} ${y+4}v-4`,palette.wall,1.2)+path(`M${x+11} ${y}l4 1-4 2Z`,palette.gold));
-   }
   }else{
-   out.push(rect(x,y,tw,th,level?palette.grass:palette.dim,2,`stroke="${palette.stroke}" stroke-width=".8" opacity="${level?1:.7}"`));
-   out.push(rect(x,y+12,tw,4,level?palette.sand:palette.shade,1,`opacity=".7"`));
-   if(!level){
-    if(hash(cell.date)%4===0)out.push(line(`M${x+5} ${y+11}l-1-2m1 2l2-3`,palette.muted,.7,`opacity=".7"`));
-   }else if(level===1){
-    out.push(line(`M${x+3} ${y+11}v-5m0 2l-2-2m2 2l2-2`,palette.grass2,1.5));
-    out.push(circle(x+11,y+9,2,palette.gold));
-   }else if(level===2){
-    out.push(rect(x+3,y+7,9,5,palette.wall,1));
-    out.push(path(`M${x+2} ${y+7}l6-5 6 5Z`,palette.roof));
-    out.push(circle(x+11,y+11,1.5,palette.gold,`class="dw-lantern"`));
-   }else{
-    out.push(rect(x+3,y+5,9,8,palette.wall,1));
-    out.push(path(`M${x+2} ${y+5}l6-5 6 5Z`,palette.roof));
-    out.push(rect(x+6,y+7,3,3,palette.gold,.7,`class="dw-lantern"`));
-    if(level===4){out.push(rect(x+10,y+1,2,4,palette.shade)+circle(x+11,y,2,palette.gold,`class="dw-smoke"`));}
-   }
+   out.push(pixelTile(x,y,level,cell.units,arch,palette));
   }
   // Event-specific decorations are sourced exclusively from each UTC day's actual events.
   if(cell.units&&!unrevealed){
