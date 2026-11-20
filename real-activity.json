@@ -1,46 +1,16 @@
 {
   "schema_version": "1",
   "source": "github",
-  "generated_at": "2026-11-19T10:43:09.455Z",
+  "generated_at": "2026-11-20T10:25:38.499Z",
   "user": {
     "login": "AdityaSreevatsaK",
     "url": "https://github.com/AdityaSreevatsaK"
   },
   "repositories": [
     {
-      "full_name": "AdityaSreevatsaK/Developer-World",
-      "name": "Developer-World",
-      "url": "https://github.com/AdityaSreevatsaK/Developer-World"
-    },
-    {
-      "full_name": "AdityaSreevatsaK/GitHub-Activity-Studio",
-      "name": "GitHub-Activity-Studio",
-      "url": "https://github.com/AdityaSreevatsaK/GitHub-Activity-Studio"
-    },
-    {
-      "full_name": "AdityaSreevatsaK/langchain-redis",
-      "name": "langchain-redis",
-      "url": "https://github.com/AdityaSreevatsaK/langchain-redis"
-    },
-    {
-      "full_name": "AdityaSreevatsaK/Open-Source-Metro",
-      "name": "Open-Source-Metro",
-      "url": "https://github.com/AdityaSreevatsaK/Open-Source-Metro"
-    },
-    {
       "full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
       "name": "Taiyou-Manga-Storage-Controller",
       "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller"
-    },
-    {
-      "full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "name": "Taiyou-Novels-Storage-Controller",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller"
-    },
-    {
-      "full_name": "AdityaSreevatsaK/Taiyous-Anime-Library",
-      "name": "Taiyous-Anime-Library",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Anime-Library"
     },
     {
       "full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
@@ -51,395 +21,183 @@
       "full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
       "name": "Taiyous-Personal-Library",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library"
-    },
-    {
-      "full_name": "langchain-ai/langchain-redis",
-      "name": "langchain-redis",
-      "url": "https://github.com/langchain-ai/langchain-redis"
-    },
-    {
-      "full_name": "rossjrw/rossjrw",
-      "name": "rossjrw",
-      "url": "https://github.com/rossjrw/rossjrw"
-    },
-    {
-      "full_name": "wheelgap/wheels",
-      "name": "wheels",
-      "url": "https://github.com/wheelgap/wheels"
     }
   ],
   "activity": [
     {
-      "id": "public-20528146048",
+      "id": "public-20724277093",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "occurred_at": "2026-11-20T04:41:32Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-20724646103",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-18T14:54:05Z",
+      "occurred_at": "2026-11-20T04:47:22Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
       "count": 1
     },
     {
-      "id": "public-20528588348",
+      "id": "public-20725441460",
       "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-18T14:58:37Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "occurred_at": "2026-11-20T05:00:40Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
       "count": 1
     },
     {
-      "id": "public-20529032390",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Anime-Library",
-      "occurred_at": "2026-11-18T15:03:09Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Anime-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20529374701",
-      "kind": "pr_opened",
-      "repo_full_name": "wheelgap/wheels",
-      "occurred_at": "2026-11-18T15:06:33Z",
-      "url": "https://github.com/wheelgap/wheels",
-      "count": 1
-    },
-    {
-      "id": "public-20529498521",
-      "kind": "pr_opened",
-      "repo_full_name": "wheelgap/wheels",
-      "occurred_at": "2026-11-18T15:07:44Z",
-      "url": "https://github.com/wheelgap/wheels",
-      "count": 1
-    },
-    {
-      "id": "public-20530708534",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "occurred_at": "2026-11-18T15:20:21Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20532211188",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-18T15:35:28Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20532829139",
-      "kind": "issue_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-18T15:41:24Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20532905409",
-      "kind": "issue_opened",
-      "repo_full_name": "AdityaSreevatsaK/Developer-World",
-      "occurred_at": "2026-11-18T15:42:09Z",
-      "url": "https://github.com/AdityaSreevatsaK/Developer-World",
-      "count": 1
-    },
-    {
-      "id": "public-20534808258",
-      "kind": "issue_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "occurred_at": "2026-11-18T16:01:00Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20534838182",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-18T16:01:17Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20535020879",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Open-Source-Metro",
-      "occurred_at": "2026-11-18T16:03:04Z",
-      "url": "https://github.com/AdityaSreevatsaK/Open-Source-Metro",
-      "count": 1
-    },
-    {
-      "id": "public-20535504328",
-      "kind": "pr_opened",
-      "repo_full_name": "langchain-ai/langchain-redis",
-      "occurred_at": "2026-11-18T16:07:22Z",
-      "url": "https://github.com/langchain-ai/langchain-redis",
-      "count": 1
-    },
-    {
-      "id": "public-20536332391",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-18T16:14:03Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20537704385",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-18T16:25:55Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20537888721",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Open-Source-Metro",
-      "occurred_at": "2026-11-18T16:27:33Z",
-      "url": "https://github.com/AdityaSreevatsaK/Open-Source-Metro",
-      "count": 1
-    },
-    {
-      "id": "public-20538583230",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-18T16:33:44Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20539331607",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-18T16:40:27Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20541233441",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/GitHub-Activity-Studio",
-      "occurred_at": "2026-11-18T16:57:04Z",
-      "url": "https://github.com/AdityaSreevatsaK/GitHub-Activity-Studio",
-      "count": 1
-    },
-    {
-      "id": "public-20541643475",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Developer-World",
-      "occurred_at": "2026-11-18T17:00:50Z",
-      "url": "https://github.com/AdityaSreevatsaK/Developer-World",
-      "count": 1
-    },
-    {
-      "id": "public-20542442849",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Open-Source-Metro",
-      "occurred_at": "2026-11-18T17:08:12Z",
-      "url": "https://github.com/AdityaSreevatsaK/Open-Source-Metro",
-      "count": 1
-    },
-    {
-      "id": "public-20542573160",
+      "id": "public-20725869798",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-18T17:09:27Z",
+      "occurred_at": "2026-11-20T05:07:27Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
       "count": 1
     },
     {
-      "id": "public-20543548472",
+      "id": "public-20726314594",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-18T17:18:33Z",
+      "occurred_at": "2026-11-20T05:14:35Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
       "count": 1
     },
     {
-      "id": "public-20543869727",
+      "id": "public-20727556016",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-18T17:21:41Z",
+      "occurred_at": "2026-11-20T05:34:04Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
       "count": 1
     },
     {
-      "id": "public-20544777652",
+      "id": "public-20728656810",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-18T17:30:16Z",
+      "occurred_at": "2026-11-20T05:51:00Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
       "count": 1
     },
     {
-      "id": "public-20546193025",
+      "id": "public-20728873659",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "occurred_at": "2026-11-20T05:54:26Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-20729405430",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "occurred_at": "2026-11-20T06:02:33Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-20730582221",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-18T17:44:03Z",
+      "occurred_at": "2026-11-20T06:19:42Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
       "count": 1
     },
     {
-      "id": "public-20547719754",
+      "id": "public-20731107561",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-18T17:59:10Z",
+      "occurred_at": "2026-11-20T06:27:33Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
       "count": 1
     },
     {
-      "id": "public-20548087216",
+      "id": "public-20735258567",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-18T18:02:51Z",
+      "occurred_at": "2026-11-20T07:25:49Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
       "count": 1
     },
     {
-      "id": "public-20548261302",
+      "id": "public-20735448126",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-18T18:04:32Z",
+      "occurred_at": "2026-11-20T07:28:26Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
       "count": 1
     },
     {
-      "id": "public-20548910665",
+      "id": "public-20737774708",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "occurred_at": "2026-11-20T08:00:00Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20739884433",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "occurred_at": "2026-11-20T08:27:11Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20740825291",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "occurred_at": "2026-11-20T08:39:15Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20740888897",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-18T18:10:43Z",
+      "occurred_at": "2026-11-20T08:40:03Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
       "count": 1
     },
     {
-      "id": "public-20549308545",
+      "id": "public-20744023848",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-18T18:14:36Z",
+      "occurred_at": "2026-11-20T09:18:06Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
       "count": 1
     },
     {
-      "id": "public-20560647064",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-18T20:07:19Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20561180397",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-18T20:12:34Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20561288538",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/langchain-redis",
-      "occurred_at": "2026-11-18T20:13:37Z",
-      "url": "https://github.com/AdityaSreevatsaK/langchain-redis",
-      "count": 1
-    },
-    {
-      "id": "public-20561292900",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/langchain-redis",
-      "occurred_at": "2026-11-18T20:13:40Z",
-      "url": "https://github.com/AdityaSreevatsaK/langchain-redis",
-      "count": 1
-    },
-    {
-      "id": "public-20561454910",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-18T20:15:14Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20565399339",
-      "kind": "issue_opened",
-      "repo_full_name": "rossjrw/rossjrw",
-      "occurred_at": "2026-11-18T20:55:15Z",
-      "url": "https://github.com/rossjrw/rossjrw",
-      "count": 1
-    },
-    {
-      "id": "public-20607806524",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "occurred_at": "2026-11-19T06:12:04Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20609435833",
+      "id": "public-20748350747",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-19T06:35:23Z",
+      "occurred_at": "2026-11-20T10:09:53Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
       "count": 1
     },
     {
-      "id": "public-20610043892",
+      "id": "public-20749108807",
       "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "occurred_at": "2026-11-19T06:43:56Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "occurred_at": "2026-11-20T10:18:42Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
       "count": 1
     },
     {
-      "id": "public-20617330188",
+      "id": "public-20749567969",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-19T08:19:28Z",
+      "occurred_at": "2026-11-20T10:24:15Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20617906161",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-19T08:26:25Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20618402018",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-19T08:32:23Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20619024537",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "occurred_at": "2026-11-19T08:39:49Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20627429951",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "occurred_at": "2026-11-19T10:13:29Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
       "count": 1
     }
   ],
   "contribution_calendar": {
-    "from": "2025-11-20",
-    "to": "2026-11-19",
-    "total_contributions": 2004,
+    "from": "2025-11-21",
+    "to": "2026-11-20",
+    "total_contributions": 2247,
     "days": [
-      {
-        "date": "2025-11-20",
-        "count": 0,
-        "level": "NONE"
-      },
       {
         "date": "2025-11-21",
         "count": 0,
@@ -2257,8 +2015,13 @@
       },
       {
         "date": "2026-11-19",
-        "count": 35,
-        "level": "FIRST_QUARTILE"
+        "count": 191,
+        "level": "THIRD_QUARTILE"
+      },
+      {
+        "date": "2026-11-20",
+        "count": 87,
+        "level": "SECOND_QUARTILE"
       }
     ]
   },
