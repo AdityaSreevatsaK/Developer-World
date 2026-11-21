@@ -1,12 +1,17 @@
 {
   "schema_version": "1",
   "source": "github",
-  "generated_at": "2026-11-20T10:25:38.499Z",
+  "generated_at": "2026-11-21T10:09:47.746Z",
   "user": {
     "login": "AdityaSreevatsaK",
     "url": "https://github.com/AdityaSreevatsaK"
   },
   "repositories": [
+    {
+      "full_name": "AdityaSreevatsaK/AdityaSreevatsaK",
+      "name": "AdityaSreevatsaK",
+      "url": "https://github.com/AdityaSreevatsaK/AdityaSreevatsaK"
+    },
     {
       "full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
       "name": "Taiyou-Manga-Storage-Controller",
@@ -21,188 +26,188 @@
       "full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
       "name": "Taiyous-Personal-Library",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library"
+    },
+    {
+      "full_name": "AdityaSreevatsaK/Taiyous-Shared-Core",
+      "name": "Taiyous-Shared-Core",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Shared-Core"
     }
   ],
   "activity": [
     {
-      "id": "public-20724277093",
+      "id": "public-20785275553",
       "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-20T04:41:32Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Shared-Core",
+      "occurred_at": "2026-11-20T17:11:23Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Shared-Core",
       "count": 1
     },
     {
-      "id": "public-20724646103",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-20T04:47:22Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20725441460",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-20T05:00:40Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20725869798",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-20T05:07:27Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20726314594",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-20T05:14:35Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20727556016",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-20T05:34:04Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20728656810",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-20T05:51:00Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20728873659",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-20T05:54:26Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20729405430",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-20T06:02:33Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20730582221",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-20T06:19:42Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20731107561",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-20T06:27:33Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20735258567",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-20T07:25:49Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20735448126",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-20T07:28:26Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20737774708",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-20T08:00:00Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20739884433",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-20T08:27:11Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20740825291",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
-      "occurred_at": "2026-11-20T08:39:15Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
-      "count": 1
-    },
-    {
-      "id": "public-20740888897",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-20T08:40:03Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20744023848",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-20T09:18:06Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20748350747",
+      "id": "public-20786494067",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-20T10:09:53Z",
+      "occurred_at": "2026-11-20T17:24:04Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
       "count": 1
     },
     {
-      "id": "public-20749108807",
+      "id": "public-20787254712",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-20T17:32:26Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20787814374",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Shared-Core",
+      "occurred_at": "2026-11-20T17:38:30Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Shared-Core",
+      "count": 1
+    },
+    {
+      "id": "public-20787856579",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "occurred_at": "2026-11-20T17:38:59Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20788229780",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-20T17:43:07Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20790689575",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
-      "occurred_at": "2026-11-20T10:18:42Z",
+      "occurred_at": "2026-11-20T18:10:33Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
       "count": 1
     },
     {
-      "id": "public-20749567969",
+      "id": "public-20791304703",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "occurred_at": "2026-11-20T18:17:23Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20793152984",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Shared-Core",
+      "occurred_at": "2026-11-20T18:38:25Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Shared-Core",
+      "count": 1
+    },
+    {
+      "id": "public-20793885353",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "occurred_at": "2026-11-20T18:47:11Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-20797294451",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "occurred_at": "2026-11-20T19:27:58Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-20797972432",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "occurred_at": "2026-11-20T19:36:02Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20798079960",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Shared-Core",
+      "occurred_at": "2026-11-20T19:37:21Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Shared-Core",
+      "count": 1
+    },
+    {
+      "id": "public-20839393792",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Shared-Core",
+      "occurred_at": "2026-11-21T07:04:02Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Shared-Core",
+      "count": 1
+    },
+    {
+      "id": "public-20839453558",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "occurred_at": "2026-11-21T07:05:25Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20840540629",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "occurred_at": "2026-11-21T07:29:42Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20840705038",
       "kind": "pr_opened",
       "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-20T10:24:15Z",
+      "occurred_at": "2026-11-21T07:33:39Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20840779243",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
+      "occurred_at": "2026-11-21T07:35:26Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20840941041",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/AdityaSreevatsaK",
+      "occurred_at": "2026-11-21T07:39:14Z",
+      "url": "https://github.com/AdityaSreevatsaK/AdityaSreevatsaK",
+      "count": 1
+    },
+    {
+      "id": "public-20842500015",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "occurred_at": "2026-11-21T08:13:28Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
+      "count": 1
+    },
+    {
+      "id": "public-20843660833",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "occurred_at": "2026-11-21T08:37:43Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
       "count": 1
     }
   ],
   "contribution_calendar": {
-    "from": "2025-11-21",
-    "to": "2026-11-20",
-    "total_contributions": 2247,
+    "from": "2025-11-22",
+    "to": "2026-11-21",
+    "total_contributions": 2473,
     "days": [
-      {
-        "date": "2025-11-21",
-        "count": 0,
-        "level": "NONE"
-      },
       {
         "date": "2025-11-22",
         "count": 0,
@@ -1971,7 +1976,7 @@
       {
         "date": "2026-11-10",
         "count": 77,
-        "level": "SECOND_QUARTILE"
+        "level": "FIRST_QUARTILE"
       },
       {
         "date": "2026-11-11",
@@ -2010,7 +2015,7 @@
       },
       {
         "date": "2026-11-18",
-        "count": 305,
+        "count": 309,
         "level": "FOURTH_QUARTILE"
       },
       {
@@ -2020,8 +2025,13 @@
       },
       {
         "date": "2026-11-20",
-        "count": 87,
-        "level": "SECOND_QUARTILE"
+        "count": 247,
+        "level": "FOURTH_QUARTILE"
+      },
+      {
+        "date": "2026-11-21",
+        "count": 62,
+        "level": "FIRST_QUARTILE"
       }
     ]
   },
