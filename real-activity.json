@@ -1,7 +1,7 @@
 {
   "schema_version": "1",
   "source": "github",
-  "generated_at": "2026-11-25T11:40:41.201Z",
+  "generated_at": "2026-11-26T11:27:23.345Z",
   "user": {
     "login": "AdityaSreevatsaK",
     "url": "https://github.com/AdityaSreevatsaK"
@@ -34,14 +34,6 @@
     }
   ],
   "activity": [
-    {
-      "id": "public-20974302395",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyous-Personal-Library",
-      "occurred_at": "2026-11-23T06:09:04Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Personal-Library",
-      "count": 1
-    },
     {
       "id": "public-20975391253",
       "kind": "pr_opened",
@@ -204,15 +196,10 @@
     }
   ],
   "contribution_calendar": {
-    "from": "2025-11-26",
-    "to": "2026-11-25",
-    "total_contributions": 2624,
+    "from": "2025-11-27",
+    "to": "2026-11-26",
+    "total_contributions": 2625,
     "days": [
-      {
-        "date": "2025-11-26",
-        "count": 0,
-        "level": "NONE"
-      },
       {
         "date": "2025-11-27",
         "count": 0,
@@ -2032,6 +2019,11 @@
         "date": "2026-11-25",
         "count": 0,
         "level": "NONE"
+      },
+      {
+        "date": "2026-11-26",
+        "count": 1,
+        "level": "FIRST_QUARTILE"
       }
     ]
   },
