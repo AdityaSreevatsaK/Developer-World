@@ -1,7 +1,7 @@
 {
   "schema_version": "1",
   "source": "github",
-  "generated_at": "2026-11-26T11:27:23.345Z",
+  "generated_at": "2026-11-27T11:22:21.843Z",
   "user": {
     "login": "AdityaSreevatsaK",
     "url": "https://github.com/AdityaSreevatsaK"
@@ -34,30 +34,6 @@
     }
   ],
   "activity": [
-    {
-      "id": "public-20975391253",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "occurred_at": "2026-11-23T06:25:43Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20975622770",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "occurred_at": "2026-11-23T06:29:16Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "count": 1
-    },
-    {
-      "id": "public-20975817555",
-      "kind": "pr_opened",
-      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "occurred_at": "2026-11-23T06:32:14Z",
-      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
-      "count": 1
-    },
     {
       "id": "public-21029069079",
       "kind": "issue_opened",
@@ -193,18 +169,77 @@
       "occurred_at": "2026-11-24T17:06:50Z",
       "url": "https://github.com/AdityaSreevatsaK/Taiyous-Shared-Core",
       "count": 1
+    },
+    {
+      "id": "public-21383930593",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "occurred_at": "2026-11-26T13:08:14Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Manga-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-21384531706",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Manga-Library",
+      "occurred_at": "2026-11-26T13:14:30Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Manga-Library",
+      "count": 1
+    },
+    {
+      "id": "public-21385740213",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Shared-Core",
+      "occurred_at": "2026-11-26T13:27:07Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Shared-Core",
+      "count": 1
+    },
+    {
+      "id": "public-21388777867",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "occurred_at": "2026-11-26T13:58:54Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-21389180085",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "occurred_at": "2026-11-26T14:03:03Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-21389779386",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "occurred_at": "2026-11-26T14:09:08Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-21390518033",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "occurred_at": "2026-11-26T14:16:43Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyou-Novels-Storage-Controller",
+      "count": 1
+    },
+    {
+      "id": "public-21393390369",
+      "kind": "pr_opened",
+      "repo_full_name": "AdityaSreevatsaK/Taiyous-Shared-Core",
+      "occurred_at": "2026-11-26T14:46:07Z",
+      "url": "https://github.com/AdityaSreevatsaK/Taiyous-Shared-Core",
+      "count": 1
     }
   ],
   "contribution_calendar": {
-    "from": "2025-11-27",
-    "to": "2026-11-26",
-    "total_contributions": 2625,
+    "from": "2025-11-28",
+    "to": "2026-11-27",
+    "total_contributions": 2641,
     "days": [
-      {
-        "date": "2025-11-27",
-        "count": 0,
-        "level": "NONE"
-      },
       {
         "date": "2025-11-28",
         "count": 0,
@@ -2022,8 +2057,13 @@
       },
       {
         "date": "2026-11-26",
-        "count": 1,
+        "count": 17,
         "level": "FIRST_QUARTILE"
+      },
+      {
+        "date": "2026-11-27",
+        "count": 0,
+        "level": "NONE"
       }
     ]
   },
